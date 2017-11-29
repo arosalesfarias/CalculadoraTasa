@@ -1,0 +1,9 @@
+{
+    "name": "calctasa-ui-angular",
+    "description": "Calculadora de Tasas AngularJS",
+    "author": "Ariel Rosales",
+    "scripts": {},
+    "dependencies": {
+        "angular": "^1.6.4"
+    }
+}
