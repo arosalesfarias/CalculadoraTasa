@@ -1,11 +1,29 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="myApp">
 
-<head></head>
+<head>
+    <script src="node_modules/angular/angular.min.js"></script>
+</head>
 
-<body>
-    <h1>Hola</h1>
+<body ng-controller="CalcCtrl as ctrl">
+    <h1>Calculadora de Tasas</h1>
+    <form>
+        <div>
+            <label>Ingrese la Tasa Nominal Anual (TNA):</label>
+            <input ng-model="ctrl.tna">
+            <label>Ingrese la Periodo:</label>
+            <input ng-model="ctrl.periodo">
+            <button ng-click="ctrl.calcularTEA()">Convertir</button>
+        </div>
+        <div>
+            <label>TEA</label>
+            <span>{{ ctrl.tea }}</span>
+        </div>
+    </form>
 
+
+    <!--Controllers-->
+    <script src="js/app.js"></script>
     <!--Dominios-->
     <script src="js/domain/CalcTasa.js"></script>
 </body>
